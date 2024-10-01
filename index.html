@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+        ul.a {
+            list-style-position: outside;
+        }
+        ul.b {
+            list-style-position: inside;
+        }
+        
+        /* Styles for colored lists */
+        ol {
+            background: #ff9999;
+            padding: 20px;
+        }
+        ul {
+            background: #3399ff;
+            padding: 20px;
+        }
+        ol li {
+            background: #ffe5e5;
+            padding: 5px;
+            margin-left: 35px;
+        }
+        ul li {
+            background: #cce5ff;
+            margin: 5px;
+        }
+        
+        
+        #customers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        Additional table styles 
+        table, th, td {
+            border: 1px solid black;
+            width: 100%;
+        }
+
+        /* Hoverable table styles */
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        tr:hover {
+            background-color: coral;
+        }
+
+        /* Responsive table */
+        .responsive {
+            overflow-x: auto;
+        }
+
+        /* Styles for rounded corners */
+        #rcorners1, #rcorners2, #rcorners3, #rcorners4 {
+            border-radius: 15px;
+            background: #73AD21;
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+        }
+        #rcorners1 {
+            border-radius: 15px 50px 30px 5px;
+        }
+        #rcorners2 {
+            border-radius: 15px 50px 30px;
+        }
+        #rcorners3 {
+            border-radius: 15px 50px;
+        }
+        #rcorners4 {
+            border-radius: 15px;
+        }
+
+        /* Styles for currentcolor and box-shadow */
+        body {
+            color: green;
+        }
+
+        div { 
+            box-shadow: 0px 0px 15px currentcolor;
+            border: 5px solid currentcolor;
+            padding: 15px;
+        }
+
+        /* Text shadow styles */
+        h1 {
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        h1.red-shadow {
+            text-shadow: 2px 2px 5px red;
+        }
+
+        h1.coral-border {
+            color: coral;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+
+        /* Box-shadow styles */
+        .box-shadow {
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background-color: coral;
+            box-shadow: 10px 10px 5px 12px lightblue;
+        }
+
+        /* Transition styles */
+        div.transition {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: width 2s;
+        }
+
+        #div1 {transition-timing-function: linear;}
+        #div2 {transition-timing-function: ease;}
+        #div3 {transition-timing-function: ease-in;}
+        #div4 {transition-timing-function: ease-out;}
+        #div5 {transition-timing-function: ease-in-out;}
+
+        div:hover {
+            width: 300px;
+        }
+
+        /* Word-break styles */
+        p.test1 {
+            width: 140px; 
+            border: 1px solid #000000;
+            word-break: keep-all;
+        }
+
+        p.test2 {
+            width: 140px; 
+            border: 1px solid #000000;
+            word-break: break-all;
+        }
+
+        /* Writing-mode styles */
+        p.test1 {
+            writing-mode: horizontal-tb; 
+        }
+
+        span.test2 {
+            writing-mode: vertical-rl; 
+        }
+
+        p.test2 {
+            writing-mode: vertical-rl; 
+        }
+        h1, h2, p {
+  text-align: center;
+  color: red;
+}
+
+/* Center class */
+.center {
+  text-align: center;
+  color: red;
+}
+
+/* Large class */
+p.large {
+  font-size: 300%;
+}
+
+/* Border styles */
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+
+/* Opacity styles */
+div {
+  background-color: lightblue;
+}
+div.first {
+  opacity: 0.1;
+}
+div.second {
+  opacity: 0.3;
+}
+div.third {
+  opacity: 0.6;
+}
+
+/* Specific styles for divs */
+div {
+  border: 1px solid black;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+  background-color: lightblue;
+}
+div.centered {
+  width: 300px;
+  margin: auto;
+  border: 1px solid red;
+}
+div.height200 {
+  height: 200px;
+  width: 50%;
+  background-color: powderblue;
+}
+div.height100 {
+  height: 100px;
+  width: 500px;
+  background-color: powderblue;
+}
+div.model {
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+div.width320 {
+  width: 320px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 0;
+}
+
+/* Link styles */
+a {
+  color: hotpink;
+}
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+a:hover, a:active {
+  background-color: red;
+}
+a.button {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+a.button:hover, a.button:active {
+  background-color: green;
+  color: white;
+}
+
+/* List styles */
+ul.a {
+  list-style-type: circle;
+}
+ul.b {
+  list-style-type: square;
+}
+ol.c {
+  list-style-type: upper-roman;
+}
+ol.d {
+  list-style-type: lower-alpha;
+}
+
+/* Cursor styles */
+.cursor-example {
+  cursor: auto;
+}
+.cursor-crosshair {
+  cursor: crosshair;
+}
+.cursor-default {
+  cursor: default;
+}
+.cursor-e-resize {
+  cursor: e-resize;
+}
+.cursor-help {
+  cursor: help;
+}
+.cursor-move {
+  cursor: move;
+}
+.cursor-n-resize {
+  cursor: n-resize;
+}
+.cursor-ne-resize {
+  cursor: ne-resize;
+}
+.cursor-nw-resize {
+  cursor: nw-resize;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.cursor-progress {
+  cursor: progress;
+}
+.cursor-s-resize {
+  cursor: s-resize;
+}
+.cursor-se-resize {
+  cursor: se-resize;
+}
+.cursor-sw-resize {
+  cursor: sw-resize;
+}
+.cursor-text {
+  cursor: text;
+}
+.cursor-w-resize {
+  cursor: w-resize;
+}
+.cursor-wait {
+  cursor: wait;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1>Hello World!</h1>
+<h2>Меньший заголовок!</h2>
+<p>Это параграф.</p>
+
+<p>Hello World!</p>
+<p>Эти параграфы стилизованы с помощью CSS.</p>
+<p>Каждый параграф будет зависеть от стиля.</p>
+<p id="para1">Я тоже!</p>
+<p>И я!</p>
+<p>Этот параграф не зависит от стиля.</p>
+<p class="center">Этот параграф будет красным и выровнен по центру.</p>
+<p class="center large">Этот параграф будет красным, с выравниванием по центру и большим шрифтом.</p>
+
+<h2>Dropdown Image</h2>
+<p>Move the mouse over the image below to open the dropdown content.</p>
+
+<div class="dropdown">
+  <img src="./images/photo_2024-09-20_15-13-20.jpg" alt="Cinque Terre" width="100" height="50">
+  <div class="dropdown-content">
+  <img src="./images/photo_2024-09-20_15-13-20.jpg" alt="Cinque Terre" width="300" height="200">
+  <div class="desc">Beautiful cat</div>
+  </div>
+</div>
+
+<h1>CSS background-color пример!</h1>
+<div>
+  Это текст внутри элемента div.
+  <p>Этот параграф имеет собственный цвет фона.</p>
+  Мы все ещё находимся в элементе div.
+</div>
+
+<h1>Прозрачный блок</h1>
+<p>При использовании свойства opacity для добавления прозрачности к фону элемента все его дочерние элементы также становятся прозрачными. Это может затруднить чтение текста внутри полностью прозрачного элемента:</p>
+
+<div class="first">
+  <h1>opacity 0.1</h1>
+</div>
+
+<div class="second">
+  <h1>opacity 0.3</h1>
+</div>
+
+<div class="third">
+  <h1>opacity 0.6</h1>
+</div>
+
+<div>
+  <h1>opacity 1 (по умолчанию)</h1>
+</div>
+
+<h2>Использование индивидуальных свойств полей</h2>
+<div>Этот элемент div имеет верхнее поле 100px, правое поле 150px, нижнее поле 100px и левое поле 80px.</div>
+
+<h2>Использование margin:auto</h2>
+<p>Вы можете установить для свойства margin значение auto, чтобы горизонтально центрировать элемент в его контейнере. Затем элемент займет указанную ширину, а оставшееся пространство будет разделено поровну между левым и правым полями:</p>
+<div class="centered">
+  Этот div будет центрирован по горизонтали, потому что в нём margin: auto;
+</div>
+
+<h2>Установите высоту и ширину элемента</h2>
+<p>Этот элемент div имеет высоту 200 пикселей и ширину 50%:</p>
+<div class="height200"></div>
+
+<p>Этот элемент div имеет высоту 100 пикселей и ширину 500 пикселей:</p>
+<div class="height100"></div>
+
+<h2>Демонстрация блочной модели</h2>
+<p>CSS Блочная модель - это, по сути, блок, который охватывает каждый HTML элемент. Он состоит из: границ, отступов, полей и фактического содержимого.</p>
+<div class="model">Этот бессмысленный текст является содержимым блока. Мы добавили отступ 50 пикселей, поле 20 пикселей и зеленую границу 15 пикселей. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+<h2>Расчёт общей ширины:</h2>
+<img src="./images/photo_2024-09-20_15-13-20.jpg" width="350" height="263" alt="Klematis">
+<div>Изображение выше имеет ширину 350 пикселей. Общая ширина этого элемента также 350 пикселей.</div>
+
+<h2>CSS Ссылки</h2>
+<p><b><a href="index.html" target="_blank">Это ссылка</a></b></p>
+
+<h2>Ссылка в виде кнопки</h2>
+<p>Ссылка стилизуется в виде кнопки:</p>
+<a href="index.html" target="_blank">Это ссылка</a>
+
+<a class="button" href="index.html" target="_blank">Это ссылка</a>
+
+<h2>Курсоры</h2>
+<p>Наведите курсор на слова, чтобы изменить курсор.</p>
+<span class="cursor-example">auto</span><br>
+<span class="cursor-crosshair">crosshair</span><br>
+<span class="cursor-default">default</span><br>
+<span class="cursor-e-resize">e-resize</span><br>
+<span class="cursor-help">help</span><br>
+<span class="cursor-move">move</span><br>
+<span class="cursor-n-resize">n-resize</span><br>
+<span class="cursor-ne-resize">ne-resize</span><br>
+<span class="cursor-nw-resize">nw-resize</span><br>
+<span class="cursor-pointer">pointer</span><br>
+<span class="cursor-progress">progress</span><br>
+<span class="cursor-s-resize">s-resize</span><br>
+<span class="cursor-se-resize">se-resize</span><br>
+<span class="cursor-sw-resize">sw-resize</span><br>
+<span class="cursor-text">text</span><br>
+<span class="cursor-w-resize">w-resize</span><br>
+<span class="cursor-wait">wait</span><br>
+
+<h2>Списки</h2>
+<p>Пример неупорядоченных списков:</p>
+<ul class="a">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+<ul class="b">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+<p>Пример упорядоченных списков:</p>
+<ol class="c">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="d">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+    </style>
+</head>
+<body>
+   
+    
+<h1>Свойство list-style-position</h1>
+
+<h2>list-style-position: outside (по умолчанию):</h2>
+<ul class="a">
+    <li>Кофе - сваренный напиток, приготовленный из обжаренных кофейных зерен, которые являются семенами ягод растения Coffea.</li>
+    <li>Чай - ароматный напиток, который обычно готовят путем заливки горячей или кипящей воды высушенных листьев Camellia sinensis, вечнозеленого кустарника (куста), произрастающего в Азии.</li>
+    <li>Coca Cola - газированный безалкогольный напиток, производимый компанией The Coca-Cola Company. Название напитка связано с двумя его исходными ингредиентами: орехами кола (источником кофеина) и листьями коки.</li>
+</ul>
+
+<h2>list-style-position: inside:</h2>
+<ul class="b">
+    <li>Кофе - сваренный напиток, приготовленный из обжаренных кофейных зерен, которые являются семенами ягод растения Coffea.</li>
+    <li>Чай - ароматный напиток, который обычно готовят путем заливки горячей или кипящей воды высушенных листьев Camellia sinensis, вечнозеленого кустарника (куста), произрастающего в Азии.</li>
+    <li>Coca Cola - газированный безалкогольный напиток, производимый компанией The Coca-Cola Company. Название напитка связано с двумя его исходными ингредиентами: орехами кола (источником кофеина) и листьями коки.</li>
+</ul>
+
+<h1>Стилизация списков с помощью цветов:</h1>
+<ol>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Coca Cola</li>
+</ol>
+<ul>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Coca Cola</li>
+</ul>
+
+<h1>Таблицы</h1>
+<table id="customers">
+    <tr>
+        <th>Компания</th>
+        <th>Контакт</th>
+        <th>Страна</th>
+    </tr>
+    <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+    </tr>
+    <tr>
+        <td>Berglunds snabbköp</td>
+        <td>Christina Berglund</td>
+        <td>Sweden</td>
+    </tr>
+    <tr>
+        <td>Centro comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+    </tr>
+    <tr>
+        <td>Ernst Handel</td>
+        <td>Roland Mendel</td>
+        <td>Austria</td>
+    </tr>
+    <tr>
+        <td>Island Trading</td>
+        <td>Helen Bennett</td>
+        <td>UK</td>
+    </tr>
+    <tr>
+        <td>Königlich Essen</td>
+        <td>Philip Cramer</td>
+        <td>Germany</td>
+    </tr>
+    <tr>
+        <td>Laughing Bacchus Winecellars</td>
+        <td>Yoshi Tannamuri</td>
+        <td>Canada</td>
+    </tr>
+    <tr>
+        <td>Magazzini Alimentari Riuniti</td>
+        <td>Giovanni Rovelli</td>
+        <td>Italy</td>
+    </tr>
+    <tr>
+        <td>North/South</td>
+        <td>Simon Crowther</td>
+        <td>UK</td>
+    </tr>
+    <tr>
+        <td>Paris spécialités</td>
+        <td>Marie Bertrand</td>
+        <td>France</td>
+    </tr>
+</table>
+
+<h2>Добавить границу к таблице:</h2>
+<table>
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+    </tr>
+    <tr>
+        <td>Peter</td>
+        <td>Griffin</td>
+    </tr>
+    <tr>
+        <td>Lois</td>
+        <td>Griffin</td>
+    </tr>
+</table>
+
+<h2>Таблица на всю ширину</h2>
+<table>
+    <tr>
+        <th>Имя</th>
+        <th>Фамилия</th>
+        <th>Год</th>
+        <th>Год</th>
+        <th>Год</th>
+        <th>Год</th>
+        <th>Год</th>
+        <th>Год</th>
+        <th>Год</th>
+    </tr>
+    <tr>
+        <td>Peter</td>
+        <td>Griffin</td>
+        <td>$100</td>
+        <td>$100</td>
+        <td>$100</td>
+        <td>$100</td>
+        <td>$100</td>
+        <td>$100</td>
+        <td>$100</td>
+        <td>$100</td>
+    </tr>
+    <tr>
+        <td>Lois</td>
+        <td>Griffin</td>
+        <td>$150</td>
+        <td>$150</td>
+        <td>$150</td>
+        <td>$150</td>
+        <td>$150</td>
+        <td>$150</td>
+        <td>$150</td>
+        <td>$150</td>
+    </tr>
+    <tr>
+        <td>Joe</td>
+        <td>Swanson</td>
+        <td>$300</td>
+        <td>$300</td>
+        <td>$300</td>
+        <td>$300</td>
+        <td>$300</td>
+        <td>$300</td>
+        <td>$300</td>
+        <td>$300</td>
+    </tr>
+    <tr>
+        <td>Cleveland</td>
+        <td>Brown</td>
+        <td>$250</td>
+        <td>$250</td>
+        <td>$250</td>
+        <td>$250</td>
+        <td>$250</td>
+        <td>$250</td>
+        <td>$250</td>
+        <td>$250</td>
+    </tr>
+</table>
+
+<h1>Границы с закругленными углами</h1>
+<div id="rcorners1">Это элемент с закругленными углами.</div>
+<div id="rcorners2">Это элемент с закругленными углами.</div>
+<div id="rcorners3">Это элемент с закругленными углами.</div>
+<div id="rcorners4">Это элемент с закругленными углами.</div>
+
+<h1>The currentcolor Keyword</h1>
+<p>This is some text in the body part...</p>
+<div>
+    <p>This div's border color and shadow color is set to the current color value of the body element.</p>
+</div>
+
+<h1>Text-shadow effect!</h1>
+<h1 class="red-shadow">Text-shadow effect!</h1>
+
+<h1 class="coral-border">Border around text!</h1>
+
+<h1>The box-shadow Property</h1>
+<div class="box-shadow">A div element with a blurred, lightblue box-shadow, with a spread radius of 12px.</div>
+
+<h1>The transition-timing-function Property</h1>
+<p>Hover over the div elements below, to see the different speed curves:</p>
+<div id="div1" class="transition">linear</div><br>
+<div id="div2" class="transition">ease</div><br>
+<div id="div3" class="transition">ease-in</div><br>
+<div id="div4" class="transition">ease-out</div><br>
+<div id="div5" class="transition">ease-in-out</div><br>
+
+<h1>The word-break Property</h1>
+<p class="test1">This paragraph contains some text. This line will-break-at-hyphens.</p>
+<p class="test2">This paragraph contains some text. The lines will break at any character.</p>
+
+<h1>The writing-mode Property</h1>
+<p class="test1">Some text with default writing-mode.</p>
+<p>Some text with a span element with a <span class="test2">vertical-rl</span> writing-mode.</p>
+<p class="test2">Some text with writing-mode: vertical-rl.</p>
+
+</body>
+</html>
+
